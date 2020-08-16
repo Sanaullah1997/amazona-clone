@@ -1,4 +1,141 @@
-*{
+html{
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+body{
+  font: 1.3rem Helvetica;
+  height: 100vh;
   margin: 0;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  /* "header header"
+  "aside main"
+  "aside footer";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 50px 1fr 30px; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 3rem;
+  height: 100%;
+}
+.header{
+  grid-area: header;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+/* .aside{
+  grid-area: aside;
+  background-color: #ffa08c;
+} */
+.main{
+  grid-area: main;
+  text-decoration: none;
+}
+.footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* header decoration */
+.brand-logo a{
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a{
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+a:hover{
+  color: #e27d3a;
+}
+a{
+  text-decoration: none;
+}
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+.products li{
+  list-style-type: none;
   padding: 0;
+  flex: 0 1 34rem;
+  margin: 1rem;
+  height: 50rem;
+  border-bottom: .1rem #c0c0c0 solid;
+}
+.product-image{
+  max-width: 30rem;
+  max-height: 30rem;
+}
+.product-name{
+  font-size: 1.6rem;
+}
+.product-brand{
+  font-size: 1.2rem;
+  color: #808080;
+}
+.product-price{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.product-rating{
+  margin-bottom: 1rem;
+}
+
+/* SideBar */
+.brand-logo button{
+  font-size: 1.8rem;
+  padding: .5rem;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  background: none;
+
+}
+.sidebar{
+  position: fixed;
+  transition: all .5s;
+  transform: translateX(-30rem);
+  width: 20rem;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+.sidebar.open{
+transform: translateX(0);
+}
+.sidebar-close-button{
+  border: .1rem #000000 solid;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  font-size: 2rem;
+  padding-top: 0;
+  cursor: pointer;
+  position: absolute;
+  right: .5rem;
+  top: 1.5rem;
 }
