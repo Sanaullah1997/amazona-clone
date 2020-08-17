@@ -1,0 +1,48 @@
+.back-to-home{
+    padding: 1rem;
+}
+.Product{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.Product_image{
+    flex: 2 1 40rem;
+}
+.Product_image img{
+    max-width: 45rem;
+    widows: 100%;
+}
+.Product_info{
+    flex: 1 1 20rem;
+}
+.Product_info ul li{
+    margin: .6rem;
+}
+.Product_action{
+    flex: 1 1 10rem;
+    border: .1rem #cccccc solid;
+}
+.Product_info ul, .Product_action ul{
+    list-style: none;
+}
+.Product_action ul li{
+    margin: 1rem;
+    margin-left: -1rem;
+}
+.Product_action ul li:last-child{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    border: .1rem #c0c0c0 solid;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    background-color: #f0c040;
+}
+button:hover{
+    border: .1rem #808080 solid;
+}
