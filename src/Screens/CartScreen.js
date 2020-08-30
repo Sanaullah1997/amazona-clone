@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import "./CartScreen.css";
@@ -66,7 +66,7 @@ function CartScreen(props) {
             :
             $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
            </h3>
-           <button onClick={checkoutHandler} className="full-width" disabled={cartItems.length == 0}> Proceed to Checkout</button>
+           <button onClick={checkoutHandler} className="button full-width" disabled={cartItems.length == 0}> Proceed to Checkout</button>
            </div>
         </div>
     )
